@@ -1,0 +1,50 @@
+.TopBar {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.TopBarLeft {
+    flex: 1;
+    text-align: left;
+    padding-left: 6px;
+    overflow: visible;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+.TopBarLeftHomeButton {
+    flex: 0 0 1px;
+    text-align: left;
+    overflow: visible;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+.TopBarCenter {
+    flex: 1;
+    text-align: center;
+    overflow: visible;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.TopBarRight {
+    flex: 1;
+    overflow: visible;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
