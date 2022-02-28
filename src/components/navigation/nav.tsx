@@ -11,10 +11,10 @@ export default function Nav() {
 
   return (
     <div className={ClassNames.TopBar}>
-        <div className={ClassNames.TopBarLeftHomeButton}><Link to={'/'}><Home/></Link></div>
+        <div className={ClassNames.TopBarLeftHomepage} style={{padding:'10px'}}><Link to={'/'}><Home/></Link></div>
         <div className={ClassNames.TopBarRight}>
-            <Link to={'/projects'}><Projects/></Link>
-            <Link to={'/about'}><About/></Link>
+            <div style={{padding:'10px'}}><Link to={'/projects'}><Projects/></Link></div>
+            <div style={{padding:'10px'}}><Link to={'/about'}><About/></Link></div>
         </div>
     </div>
   );
