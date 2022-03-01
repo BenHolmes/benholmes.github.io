@@ -1,26 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { BrowserRouter as Router, Routes, Route} from  'react-router-dom';
-import useLocalStorage from 'use-local-storage'
 import Nav from './navigation/nav';
 import Footer from './navigation/footer';
+import { ThemeContext } from "./providers/themeProvider";
 import Home from './pages/home';
 import About from './pages/about';
 import Projects from './pages/projects';
 import classNames from './App.module.scss';
 
 export default function App() {
-  const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
-  
-  const switchTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-  }
-
+  const { theme, toggleTheme } = useContext(ThemeContext);
   return (
     <Router>
       <div className={classNames.App} data-theme={theme}>
-        <Nav themeState={theme} themeChange={switchTheme} />
+        <Nav />
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/projects' element={<Projects/>} />

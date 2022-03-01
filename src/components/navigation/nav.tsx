@@ -1,17 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import Home from '../pages/home';
-import Projects from '../pages/projects';
-import About from '../pages/about';
+import { ThemeContext } from "../providers/themeProvider";
 import classNames from './nav.module.scss';
 
-interface NavSet {
-  themeState: string;
-  themeChange: () => void;
-}
-
-export default function Nav(props:NavSet) {
-
+export default function Nav() {
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
     <div className={classNames.TopBar}>
@@ -19,7 +12,13 @@ export default function Nav(props:NavSet) {
         <div className={classNames.TopBarRight}>
             <div style={{padding:'10px'}}><Link to={'/projects'} title={'Projects'} ><h1>Projects</h1></Link></div>
             <div style={{padding:'10px'}}><Link to={'/about'} title={'About'}><h1>About</h1></Link></div>
-            <button onClick={props.themeChange}>{props.themeState === 'light' ? 'Dark' : 'Light'}</button>
+            <div style={{padding:'10px'}}>
+              {/* <button onClick={props.themeChange}>{props.themeState === 'light' ? 'Dark' : 'Light'}</button> */}
+              <button onClick={toggleTheme}>
+                Switch to {theme === "light" ? "dark" : "light"} mode
+              </button>
+            </div>
+            
             {/* <ColorSchemeToggle /> */}
         </div>
     </div>
