@@ -20,6 +20,7 @@
     "sass": "^1.49.9",
     "save-dev": "^0.0.1-security",
     "typescript": "^4.5.5",
+    "use-local-storage": "^2.3.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
