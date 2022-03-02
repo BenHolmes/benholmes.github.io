@@ -50,3 +50,14 @@
     justify-content: flex-end;
     align-items: center;
 }
+.TopBarRightHomeButton {
+    flex: 0 0 1px;
+    text-align: right;
+    text-overflow: nowrap;
+    overflow: visible;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}

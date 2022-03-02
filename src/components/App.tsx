@@ -9,7 +9,7 @@ import Projects from './pages/projects';
 import classNames from './App.module.scss';
 
 export default function App() {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   return (
     <Router>
       <div className={classNames.App} data-theme={theme}>

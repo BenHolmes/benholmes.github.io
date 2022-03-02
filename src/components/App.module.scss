@@ -1,22 +1,40 @@
 .App {
     
-    padding-left: 160.5px;
-    padding-right: 160.5px;
+    // padding-left: 160.5px;
+    // padding-right: 160.5px;
+    padding: 20px;
+ 
 }
 
-.App {
-    color: var(--text-primary);
-    background-color: var(--background);
-    font-size: large;
-    font-weight: bold;
-    padding: 20px;
-    height: calc(100vh - 40px);
-    transition: all .5s;
+::-webkit-scrollbar {
+    width: 10px;
 }
-button {
-    color: var(--text-primary);
-    background-color: var(--background);
-    border: 2px var(--text-primary) solid;
-    float: right;
-    transition: all .5s;
+
+::-webkit-scrollbar-track {
+    background: #333;
 }
+
+::-webkit-scrollbar-thumb {
+    background: gray;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: blue;
+}
+
+// .App {
+//     color: var(--text-primary);
+//     background-color: var(--background);
+//     font-size: large;
+//     font-weight: bold;
+//     
+//     height: calc(100vh - 40px);
+//     transition: all .5s;
+// }
+// button {
+//     color: var(--text-primary);
+//     background-color: var(--background);
+//     border: 2px var(--text-primary) solid;
+//     float: right;
+//     transition: all .5s;
+// }

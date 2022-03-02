@@ -8,18 +8,15 @@ export default function Nav() {
 
   return (
     <div className={classNames.TopBar}>
-        <div className={classNames.TopBarLeftHomepage} style={{padding:'10px'}}><Link to={'/'} title={'Home'} ><h1>Ben Holmes</h1></Link></div>
+        <div className={classNames.TopBarLeftHomepage} style={{whiteSpace:'nowrap'}}><Link to={'/'} title={'Home'} ><h1>Ben Holmes</h1></Link></div>
         <div className={classNames.TopBarRight}>
             <div style={{padding:'10px'}}><Link to={'/projects'} title={'Projects'} ><h1>Projects</h1></Link></div>
             <div style={{padding:'10px'}}><Link to={'/about'} title={'About'}><h1>About</h1></Link></div>
-            <div style={{padding:'10px'}}>
-              {/* <button onClick={props.themeChange}>{props.themeState === 'light' ? 'Dark' : 'Light'}</button> */}
-              <button onClick={toggleTheme}>
-                Switch to {theme === "light" ? "dark" : "light"} mode
-              </button>
-            </div>
-            
-            {/* <ColorSchemeToggle /> */}
+            <h1 style={{padding:'10px'}}>
+                <button style={{padding:'10px'}} onClick={toggleTheme}>
+                  <h1>{theme === "light" ? "dark" : "light"}</h1>
+                </button>
+            </h1>
         </div>
     </div>
   );
