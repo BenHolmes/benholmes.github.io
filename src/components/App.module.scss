@@ -1,17 +1,14 @@
 .App {
-    
-    // padding-left: 160.5px;
-    // padding-right: 160.5px;
-    // display: flex;
-    // flex-direction: column;
-    padding: 20px;
-    //min-height: 100%;
-    position: relative;
-    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    //for footer positioning
+    padding-bottom: 41px;
 }
 
 .Content {
-    padding-bottom: 2.5rem;
+    padding: 20px;
+    background-color: blue;
+    
 }
 
 ::-webkit-scrollbar {
@@ -29,20 +26,3 @@
 ::-webkit-scrollbar-track:hover {
     background: blue;
 }
-
-// .App {
-//     color: var(--text-primary);
-//     background-color: var(--background);
-//     font-size: large;
-//     font-weight: bold;
-//     
-//     height: calc(100vh - 40px);
-//     transition: all .5s;
-// }
-// button {
-//     color: var(--text-primary);
-//     background-color: var(--background);
-//     border: 2px var(--text-primary) solid;
-//     float: right;
-//     transition: all .5s;
-// }
