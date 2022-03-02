@@ -2,8 +2,16 @@
     
     // padding-left: 160.5px;
     // padding-right: 160.5px;
+    // display: flex;
+    // flex-direction: column;
     padding: 20px;
- 
+    //min-height: 100%;
+    position: relative;
+    min-height: 100vh; 
+}
+
+.Content {
+    padding-bottom: 2.5rem;
 }
 
 ::-webkit-scrollbar {

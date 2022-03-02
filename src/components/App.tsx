@@ -12,13 +12,15 @@ export default function App() {
   const { theme } = useContext(ThemeContext);
   return (
     <Router>
-      <div className={classNames.App} data-theme={theme}>
+      <div id="app" className={classNames.App} data-theme={theme}>
         <Nav />
-        <Routes>
-          <Route path='/' element={<Home/>} />
-          <Route path='/projects' element={<Projects/>} />
-          <Route path='/about' element={<About/>} />
-        </Routes>
+        <div id='app-content' className={classNames.Content}>
+          <Routes>
+            <Route path='/' element={<Home/>} />
+            <Route path='/projects' element={<Projects/>} />
+            <Route path='/about' element={<About/>} />
+          </Routes>
+        </div>
         <Footer/>
       </div>
     </Router>   
