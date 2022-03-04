@@ -1,4 +1,6 @@
-.TopBar {
+@import '../utilities/variables.scss';
+
+.NavPositioning {
     //flex: 1;
     display: flex;
     flex-direction: row;
@@ -6,6 +8,32 @@
     align-items: center;
     background-color: green;
     
+}
+
+.NavContent {
+    display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: right;
+  white-space: nowrap;
+
+  padding: 10px;
+
+  @media #{$mq-small} {
+    margin: 0 4%;
+  }
+  @media #{$mq-medium} {
+    margin: 0 8%;
+  }
+  @media #{$mq-large} {
+    margin: 0 12%;
+  }
+  @media #{$mq-xlarge} {
+    margin: 0 18%;
+  } 
+  @media #{$mq-xxlarge} {
+    margin: 0 25%;
+  }
 }
 
 .TopBarLeft {

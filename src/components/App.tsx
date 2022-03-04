@@ -6,15 +6,15 @@ import { ThemeContext } from "./providers/themeProvider";
 import Home from './pages/home';
 import About from './pages/about';
 import Projects from './pages/projects';
-import classNames from './App.module.scss';
+import styles from './App.module.scss';
 
 export default function App() {
   const { theme } = useContext(ThemeContext);
   return (
     <Router>
-      <div id="app" className={classNames.App} data-theme={theme}>
+      <div id="app" className={styles.App} data-theme={theme}>
         <Nav />
-        <div id='app-content' className={classNames.Content}>
+        <div id='app-content' className={styles.Content}>
           <Routes>
             <Route path='/' element={<Home/>} />
             <Route path='/projects' element={<Projects/>} />

@@ -1,18 +1,36 @@
+@import "../components/utilities/variables.scss";
+
 .App {
     display: flex;
     flex-direction: column;
-    //for footer positioning
+    //for footer positioning - MAKE DYNAMIC!!!
     padding-bottom: 41px;
 }
 
 .Content {
-    padding: 20px;
+    padding: 10px;
     background-color: blue;
-    
+
+    @media #{$mq-small} {
+        margin: 0 4%;
+    }
+    @media #{$mq-medium} {
+        margin: 0 8%;
+    }
+    @media #{$mq-large} {
+        margin: 0 12%;
+    }
+    @media #{$mq-xlarge} {
+        margin: 0 18%;
+    } 
+    @media #{$mq-xxlarge} {
+        margin: 0 25%;
+    }
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    //width: 10px;
+    display: none;
 }
 
 ::-webkit-scrollbar-track {
