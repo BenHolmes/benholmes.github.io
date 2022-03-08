@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { SidebarContext } from '../providers/sidebarProvider';
 import { ThemeContext } from "../providers/themeProvider";
 import classNames from './nav.module.scss';
 
 export default function Nav() {
   const { theme, toggleTheme } = useContext(ThemeContext);
+  const { isExpanded, toggleSidebar} = useContext(SidebarContext);
 
   return (
     <div className={classNames.NavPositioning}>
@@ -18,6 +20,9 @@ export default function Nav() {
           <div>
               <button onClick={toggleTheme}>
                 <h1>{theme === "light" ? "dark" : "light"}</h1>
+              </button>
+              <button onClick={toggleSidebar}>
+                hi
               </button>
           </div>
         </div>
