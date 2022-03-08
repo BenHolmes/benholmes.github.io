@@ -21,11 +21,14 @@ export default function Nav() {
               <button onClick={toggleTheme}>
                 <h1>{theme === "light" ? "dark" : "light"}</h1>
               </button>
-              <button onClick={toggleSidebar}>
-                hi
-              </button>
           </div>
+          
         </div>
+        <div className={classNames.SideBarToggle}>
+            <button onClick={toggleSidebar}>
+              <h1>hi</h1>
+            </button>
+          </div>
       </div>
     </div>
   );
