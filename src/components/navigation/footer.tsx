@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import classNames from './footer.module.scss';
+import { NavigationData } from './navData';
 
 export default function Footer() {
 
@@ -12,9 +13,13 @@ export default function Footer() {
 
         </div>
         <div className={classNames.TopBarRight}>
-          <div style={{padding:'10px'}}><Link to={'/'}>home</Link></div>
-          <div style={{padding:'10px'}}><Link to={'/projects'}>projects</Link></div>
-          <div style={{padding:'10px'}}><Link to={'/about'}>about</Link></div>
+          { 
+            NavigationData.map((item, index) => {  
+              return (
+                <div style={{padding:'10px'}}><Link to={item.path} title={item.title}>{item.title}</Link></div>
+              ); 
+            })
+          }
         </div>
       </div>
     </div>
