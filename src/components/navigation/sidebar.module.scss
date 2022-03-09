@@ -6,22 +6,11 @@
     flex-direction: column;
     width: 200px;
     height: 100%;
-    background-color: aqua;
-    color: black;
+    background-color: rgba(#333, .3);
 }
 
-.SideBarCollapsed {
-    
-    position: fixed;
-    top: 0;
-    right: 0;
+.SideBarContent {
     display: flex;
     flex-direction: column;
-    width: 10px;
-    height: 100%;
-    
-    background-color: aqua;
-    background: opacity($color: #000000);
-    color: black;
-    
+    padding: 10px;
 }

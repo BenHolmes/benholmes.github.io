@@ -6,7 +6,7 @@
     flex-direction: row;
     //flex-wrap: wrap;
     align-items: center;
-    background-color: green;
+    //background-color: green;
     
 }
 
@@ -70,7 +70,8 @@
 }
 
 .SideBarToggle {
-  visibility: hidden;
+  //visibility: hidden;
+  display: none;
 }
 
 @media screen and (max-width: 500px) {
@@ -85,8 +86,9 @@
       display: none;
   }
   .SideBarToggle {
-        visibility: visible;
-      }
+    //visibility: visible;
+    display: flex;
+  }
 }
   // @media screen and (min-width: 500px) {
   //   .SideBarToggle {
