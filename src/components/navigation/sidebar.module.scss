@@ -6,9 +6,15 @@
     flex-direction: column;
     width: 200px;
     height: 100%;
-    background-color: rgba(#333, .3);
+    background-color: rgba(#333, .87);
 }
-
+a {
+    text-decoration: none;
+    
+  }
+  a:hover {
+    color: blue;
+  }
 .SideBarContent {
     display: flex;
     flex-direction: column;
