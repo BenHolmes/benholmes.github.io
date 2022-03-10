@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import useLocalStorage from 'use-local-storage';
 
-type Theme = "light" | "dark";
+type Theme = 'light' | 'dark';
 type ThemeContext = { theme: Theme; toggleTheme: () => void };
 
 export const ThemeContext = React.createContext<ThemeContext>(
@@ -8,9 +9,12 @@ export const ThemeContext = React.createContext<ThemeContext>(
 );
 
 export const ThemeProvider: React.FC = ({ children }) => {
-  const [theme, setTheme] = useState<Theme>("light");
+  //const [theme, setTheme] = useState<Theme>('light');
+  const [theme, setTheme] = useLocalStorage<Theme>('theme', 'light');
+
   const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
+    setTheme(theme === 'light' ? 'dark' : 'light');
+    //setThemeStorage(themeStorage === 'light' ? 'dark' : 'light');
   };
 
   const color = theme === "light" ? "#333" : "#FFF";
