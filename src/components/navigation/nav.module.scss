@@ -35,6 +35,12 @@
     margin: 0 25%;
   }
 }
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: blue;
+}
 
 .TopBarLeft {
     flex: 1;

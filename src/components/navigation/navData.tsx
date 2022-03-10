@@ -1,10 +1,11 @@
 import React from 'react'
+import  StandardIcon  from '../standard/StandardIcon'
 
 export const NavigationData = [
     {
         title: 'Home',
         path: '/',
-        icon: <></> //<FaIcons.FaHome />
+        icon: <></>//<StandardIcon id={'moon-solid-1234'} size={'XL'}/>
     },
     {
         title: 'Projects',

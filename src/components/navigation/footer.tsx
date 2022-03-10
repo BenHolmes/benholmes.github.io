@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { ThemeContext } from '../providers/themeProvider';
 import classNames from './footer.module.scss';
 import { NavigationData } from './navData';
 
 export default function Footer() {
-
+  const { theme } = useContext(ThemeContext);
+  const color = theme === "dark" ? "#333" : "#FFF";
+  const footerColor = theme === "light" ? "#333" : "#FFF";
 
   return (
-    <div className={classNames.footerPosition}>
+    <div className={classNames.footerPosition} style={{backgroundColor:footerColor}}>
       <div className={classNames.footerContent}>
         <div className={classNames.TopBarLeft}>
 
@@ -16,7 +19,9 @@ export default function Footer() {
           { 
             NavigationData.map((item, index) => {  
               return (
-                <div style={{padding:'10px'}}><Link to={item.path} title={item.title}>{item.title}</Link></div>
+                <div style={{padding:'10px'}}>
+                  <Link to={item.path} title={item.title} style={{color:color}}>{item.title}</Link>
+                </div>
               ); 
             })
           }
