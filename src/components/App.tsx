@@ -14,9 +14,9 @@ import SideBar from './navigation/sidebar';
 export default function App() {
   const { theme } = useContext(ThemeContext);
   const { isExpanded } = useContext(SidebarContext);
+
   return (
     <Router>
-       
       <div id="app" className={styles.App} data-theme={theme}>
         {isExpanded ? <SideBar />: <></>}
         <Nav />
@@ -27,12 +27,8 @@ export default function App() {
             <Route path='/about' element={<About/>} />
           </Routes>
         </div>
-        
         <Footer/>
-        
-
       </div>
-      
-    </Router>   
+    </Router>
   );
 }

@@ -19,7 +19,7 @@ export default function SideBar() {
                     NavigationData.map((item, index) => { 
                         if (index !== 0){//remove home
                             return (
-                                <div style={{paddingRight:'10px'}} onClick={toggleSidebar}><Link to={item.path} title={item.title} style={{color}}><div style={{fontSize:'30px'}}>{item.title}</div></Link></div>
+                                <div key={index} style={{paddingRight:'10px'}} onClick={toggleSidebar}><Link to={item.path} title={item.title} style={{color}}><div style={{fontSize:'30px'}}>{item.title}</div></Link></div>
                             );
                         }
                     })

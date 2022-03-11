@@ -69,10 +69,11 @@ function iconParamSetFromId(id:string): StandardIconParamSet {
     return iconNotFound;
 }
 
+
 export default function StandardIcon(props: StandardIconProps): ReactElement {
 
     const {theme} = useContext(ThemeContext);
-
+    
     const iconParamSet: StandardIconParamSet = iconParamSetFromId(props.id);
     const pathData: string = iconParamSet.path;
     const className:string = props.className ? '-' + props.className : '';
@@ -86,11 +87,11 @@ export default function StandardIcon(props: StandardIconProps): ReactElement {
         //overriding
         ...style
     };
-
+    
     const size: number = props.size ? (isSimpleSize(props.size) ? defaultIconSizes[props.size] : props.size) : defaultIconSizes['M'];
 
     const fillColor: string = props.fillColor ?? ((theme === 'light') ? '#000' : '#fff');
-    const strokeColor: string = props.strokeColor ?? '#000';
+    const strokeColor: string = props.strokeColor ?? ((theme === 'light') ? '#000' : '#fff');
     let strokeWidth: number = props.strokeWidth ?? 0;
 
     if (style?.strokeWidth && typeof style?.strokeWidth === 'number') {
@@ -104,37 +105,37 @@ export default function StandardIcon(props: StandardIconProps): ReactElement {
     const viewBoxBottom: number = iconParamSet.height + strokeWidth;
 
     //console.log ( size, viewBoxTop, viewBoxLeft, viewBoxRight, viewBoxBottom, iconParamSet.width, iconParamSet.height)
-
+    //console.log(size)
     return (
-        <svg 
-            className={'StandardIcon' + className}
-            style={svgStyle}
-            width={size}
-            height={size}
-            fill={fillColor}
-            stroke={strokeColor}
-            strokeWidth={strokeWidth}
-            viewBox={`${viewBoxLeft} ${viewBoxTop} ${viewBoxRight / 2} ${viewBoxBottom / 2}`}
-            //viewBox={`auto 1024 1024`}
-            //viewBox='auto'
-            xmlns='http://www.w3.org/2000/svg'
-        >
-            <path d={pathData} fillRule='evenodd' clipRule='evenodd'>
-                {
-                    animation ? (
-                        <animate 
-                            attributeType={animation?.attributeType}
-                            attributeName={animation?.attributeName}
-                            from={animation?.from}
-                            to={animation?.to}
-                            dur={animation?.dur}
-                            values={animation?.values}
-                            keyTimes={animation?.keyTimes}
-                            repeatCount={animation?.repeatCount}
-                        />
-                    ) : (<></>)
-                }
-            </path>
-        </svg>
+        // <div className={styles.iconContainer} style={{width:size, height:size}}>
+            <svg 
+                className={'StandardIcon'+className}
+                style={svgStyle}
+                width={size}
+                height={size}
+                fill={fillColor}
+                stroke={strokeColor}
+                strokeWidth={strokeWidth}
+                viewBox={`${viewBoxLeft} ${viewBoxTop} ${viewBoxRight / 2} ${viewBoxBottom / 2}`}
+                xmlns='http://www.w3.org/2000/svg'
+            >
+                <path d={pathData} fillRule='evenodd' clipRule='evenodd'> {/*fillRule='evenodd' clipRule='evenodd'*/}
+                    {
+                        animation ? (
+                            <animate 
+                                attributeType={animation?.attributeType}
+                                attributeName={animation?.attributeName}
+                                from={animation?.from}
+                                to={animation?.to}
+                                dur={animation?.dur}
+                                values={animation?.values}
+                                keyTimes={animation?.keyTimes}
+                                repeatCount={animation?.repeatCount}
+                            />
+                        ) : (<></>)
+                    }
+                </path>
+            </svg>
+        // </div>
     );
 }

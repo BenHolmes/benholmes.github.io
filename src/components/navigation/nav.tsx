@@ -26,7 +26,7 @@ export default function Nav() {
             NavigationData.map((item, index) => { 
               if (index !== 0){//remove home
                 return (
-                  <div style={{paddingRight:'10px'}}>
+                  <div key={index} style={{paddingRight:'10px'}}>
                     <Link to={item.path} title={item.title}><div style={{fontSize:'30px', color:color}}>{item.title}</div></Link>
                   </div>
                 );

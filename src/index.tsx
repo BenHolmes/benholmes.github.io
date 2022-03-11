@@ -8,11 +8,11 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider>
-      <SidebarProvider>
-        <App />
-      </SidebarProvider>
-    </ThemeProvider>
+      <ThemeProvider>
+        <SidebarProvider>
+          <App />
+        </SidebarProvider>
+      </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

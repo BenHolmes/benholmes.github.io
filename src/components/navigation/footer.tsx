@@ -19,7 +19,7 @@ export default function Footer() {
           { 
             NavigationData.map((item, index) => {  
               return (
-                <div style={{padding:'10px'}}>
+                <div key={index} style={{padding:'10px'}}>
                   <Link to={item.path} title={item.title} style={{color:color}}>{item.title}</Link>
                 </div>
               ); 
