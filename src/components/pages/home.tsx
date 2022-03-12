@@ -1,36 +1,20 @@
 import React from 'react';
-import  StandardIcon from '../standard/StandardIcon';
+import profile from '../../assets/images/HolmesProfileSmall.jpeg';
 
 export default function Home() {
 
+  const profile = require('../../assets/images/HolmesProfileSmall.jpeg');
 
   return (
-    <div className="Home">
-      <StandardIcon id={'moon-solid-1234'} size={'XS'} />
-      <StandardIcon id={'moon-solid-1234'} size={'S'} />
-      <StandardIcon id={'moon-solid-1234'} size={'M'} />
-      <StandardIcon id={'moon-solid-1234'} size={'L'} />
-      <StandardIcon id={'moon-solid-1234'} size={'XL'} />
-      <StandardIcon id={'moon-solid-1234'} size={'XXL'} />
-      <h1>Home</h1>
-      <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
+    <div className="Home" style={{display:'flex', flexDirection:'row', overflow:'nowrap'}}>
+      <div style={{display:'flex', padding:'10px'}}>
+        I am Ben Holmes a software developer in the Greater Seattle area specializing in the future resource intensive applications. 
+        I am currently working at Doosan GridTech as the primary front-end developer of Site Manager 2.0. 
+        I am interested in the migration of highly reliable applications movement towards API/Web front-end architecture and how quantum computers could change the future of software development and aid us in our fight against climate change.
+      </div>
+      <div style={{display:'flex'}}>
+        <img src={profile} />
+      </div>
     </div>
   );
 }
