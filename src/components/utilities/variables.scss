@@ -22,3 +22,20 @@ $base-font-size: 1em;
 // Line-Height
 $base-line-height: 1.5;
 $header-line-height: 1.25;
+
+// Spacing
+$base-spacing: $base-font-size;
+
+// Colors
+$black: #151515;
+$dark-grey: #242424;
+$grey: #666;
+$base-accent-color: #FC4842;
+$base-font-color: #CCC;
+
+// Transition Settings
+$base-transition-duration: .3s;
+$base-transition-timing: ease-in-out;
+
+// Backgrounds
+$base-background-color: $dark-grey;
