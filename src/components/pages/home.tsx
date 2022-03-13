@@ -21,7 +21,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={styles.TopBarRight}>
+      <div className={styles.HomeRightContent}>
 
         <img 
           //className={styles.detail}
@@ -31,6 +31,7 @@ export default function Home() {
             ${profileLg} 800w,
             ${profileLg} 1200w`}
           sizes ="(min-width:1336px) 75vw, 50vw"
+          //or max
           alt="Ben Holmes" 
         />
       </div>

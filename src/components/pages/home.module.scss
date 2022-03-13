@@ -23,7 +23,7 @@
 }
 
 
-.TopBarRight {
+.HomeRightContent {
     flex: 1;
     overflow: visible;
     //white-space: nowrap;
@@ -31,28 +31,56 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
 
-.detail {
-    height: 0;
-    padding-bottom: 40%;
-    margin: 0 0 $base-spacing*2;
-    background-image: url(../../assets/images/HolmesProfileSm.jpeg);
-    background-position: center center;
-    background-size: cover;
+    
+    //padding-bottom: 40%;
+    // margin: 0 0 $base-spacing*2;
+    // background-image: url(../../assets/images/HolmesProfileSm.jpeg);
+    // background-position: center center;
+    // background-size: cover;
   
-    @media #{$mq-xlarge} and #{$mq-retina} {
-      background-image: url(../../assets/images/HolmesProfileLg.jpeg);
-    }
+    // @media #{$mq-xlarge} and #{$mq-retina} {
+    //   background-image: url(../../assets/images/HolmesProfileLg.jpeg);
+    // }
   
-    @media #{$mq-medium} {
-      background-image: url(../../assets/images/HolmesProfileSm.jpeg);
-    }
+    // @media #{$mq-medium} {
+    //   background-image: url(../../assets/images/HolmesProfileSm.jpeg);
+    // }
   
-    @media #{$mq-medium} and #{$mq-retina} {
-      background-image: url(../../assets/images/HolmesProfileSm.jpeg);
-    }
+    // @media #{$mq-medium} and #{$mq-retina} {
+    //   background-image: url(../../assets/images/HolmesProfileSm.jpeg);
+    // }
   
     // Additional media queries
-  
+}
+
+//https://css-tricks.com/dont-overthink-flexbox-grids/
+@media (max-width: 600px) {
+  .HomeContent {
+    display: block;
   }
+}
+
+// .detail {
+//     height: 0;
+//     padding-bottom: 40%;
+//     margin: 0 0 $base-spacing*2;
+//     background-image: url(../../assets/images/HolmesProfileSm.jpeg);
+//     background-position: center center;
+//     background-size: cover;
+  
+//     @media #{$mq-xlarge} and #{$mq-retina} {
+//       background-image: url(../../assets/images/HolmesProfileLg.jpeg);
+//     }
+  
+//     @media #{$mq-medium} {
+//       background-image: url(../../assets/images/HolmesProfileSm.jpeg);
+//     }
+  
+//     @media #{$mq-medium} and #{$mq-retina} {
+//       background-image: url(../../assets/images/HolmesProfileSm.jpeg);
+//     }
+  
+//     // Additional media queries
+  
+//   }
