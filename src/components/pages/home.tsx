@@ -25,9 +25,9 @@ export default function Home() {
 
         <img 
           //className={styles.detail}
-          src={profileSm} 
-          srcSet={`${profileSm} 400w,
-            ${profileSm} 600w,
+          src={profileLg} //sm
+          srcSet={`${profileLg} 400w,
+            ${profileLg} 600w,
             ${profileLg} 800w,
             ${profileLg} 1200w`}
           sizes ="(min-width:1336px) 75vw, 50vw"
