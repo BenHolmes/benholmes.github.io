@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+
 //import profile from '../../assets/images/HolmesProfileSmall.jpeg';
 import styles from './home.module.scss';
 
 export default function Home() {
 
-  const profileSm = require('../../assets/images/HolmesProfileSm.jpeg');
-  const profileLg = require('../../assets/images/HolmesProfileLg.jpeg');
+  
+const profileSm = require('../../assets/images/HolmesProfileSm.jpeg');
+const profileLg = require('../../assets/images/HolmesProfileLg.jpeg');
 
   return (
     <div className={styles.HomeContent}>
